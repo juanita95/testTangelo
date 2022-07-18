@@ -70,7 +70,7 @@
       "isLoanActive": false,
       "endDate": "2022-07-21T05:00:00.000Z",
       "document": 45786,
-      "valueLoan": 15000
+      "valueLoan": 0
     },
     {
       "name": "dfhdfg",
@@ -79,7 +79,7 @@
       "isLoanActive": false,
       "endDate": "",
       "document": 78,
-      "valueLoan": 15000
+      "valueLoan": 0
     }
   ]
 }
