@@ -1,0 +1,9 @@
+<main class="wrapper">
+  <body class="body">
+    <router-outlet></router-outlet>
+    <ngx-loading [show]="loadingService.loading"
+                 [config]="{animationType: loadingService.ngxLoadingAnimationTypes.circleSwish, primaryColour: this.loadingService.loadingColor, backdropBorderRadius: '13px'}">
+    </ngx-loading>
+  </body>
+</main>
+

@@ -1,0 +1,46 @@
+@import "src/assets/scss/index";
+
+.title {
+  margin: 2% 0;
+}
+
+.url {
+  display: flex;
+  align-items: center;
+}
+
+.section-inputs {
+  width: 100%;
+  margin: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+
+.cancel-button {
+  margin-right: 5%;
+}
+
+.two-inputs {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-template-columns: 48% 48%;
+  justify-content: space-between;
+}
+
+.header-end-date {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.current-time {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}

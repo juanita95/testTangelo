@@ -1,0 +1,26 @@
+@import "src/assets/scss/index";
+
+.button-base {
+  width: 100%;
+  white-space: nowrap;
+  flex-basis: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.2rem;
+}
+
+.button-cancel {
+  @extend .text-m-wh;
+  @extend .button-base;
+  background: $gray;
+  border: 2px solid $gray;
+}
+
+.button-accept {
+  @extend .text-m-wh;
+  @extend .button-base;
+  background: $blue;
+  border: 2px solid $blue;
+}

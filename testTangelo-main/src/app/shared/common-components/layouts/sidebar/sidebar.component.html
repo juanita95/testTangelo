@@ -1,0 +1,80 @@
+<mat-drawer-container class="navbar" (window:resize)="onResize()">
+  <!-- MOBILE -->
+  <mat-drawer class="mobile-drawer"
+              [class]="panelOpenState ? 'logged-open-panel'  : ''" #drawer>
+
+    <div class="exp-panel">
+      <img class="logo-client"
+           alt="Logo tangelo"
+           src="../../../../../assets/svg/global/tangelo_logo.svg">
+    </div>
+
+    <div class="container-link">
+      <div class="container-link-item"
+           routerLink="/inicio/lista"
+           (click)="drawer.toggle()">
+        <a class="drawer-text link-section">
+          <mat-icon>vertical_split</mat-icon>
+          <span class="margin-menu text-m-wh"> Prestamos </span>
+        </a>
+      </div>
+      <div class="container-link-item"
+           routerLink="/inicio/usuario"
+           (click)="drawer.toggle()">
+        <a class="drawer-text link-section">
+          <mat-icon>account_circle</mat-icon>
+          <span class="margin-menu text-m-wh"> Solicitud </span>
+        </a>
+      </div>
+    </div>
+
+  </mat-drawer>
+
+  <!-- DESKTOP -->
+  <mat-drawer-content class="mat-drawer-content">
+
+    <mat-toolbar #header class="desktop-toolbar desktop-toolbar-client">
+      <mat-icon (click)="drawer.toggle()" class="list-mobile" value="true">list</mat-icon>
+      <div class="container">
+        <img class="logo-client"
+             alt="Logo tangelo"
+             src="../../../../../assets/svg/global/tangelo_logo.svg">
+      </div>
+      <!--    links routes desktop-->
+      <div class="desktop content-links-desktop">
+
+        <!--authenticated user-->
+        <div class="menu-desktop" mat-button
+             [matMenuTriggerFor]="menu"
+             #menuTrigger="matMenuTrigger">
+          <mat-icon>list</mat-icon>
+        </div>
+
+        <!--Material menu-->
+        <mat-menu #menu="matMenu" xPosition="before" class="user-menu-client" [hidden]="true"
+                  backdropClass="menu-backdrop-client">
+          <div>
+            <a mat-menu-item
+               class="menu-item"
+               routerLinkActive="active"
+               routerLink="/inicio/lista">
+              <span class="text-m-bl">Prestamos</span>
+            </a>
+            <a mat-menu-item
+               class="menu-item"
+               routerLinkActive="active"
+               routerLink="/inicio/usuario">
+              <span class="text-m-bl">Solicitud</span>
+            </a>
+          </div>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+
+    <!--    show component-->
+    <div class="components-client">
+      <ng-content></ng-content>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>

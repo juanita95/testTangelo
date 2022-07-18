@@ -1,0 +1,32 @@
+<div class="inputs">
+  <form class="form-bl"
+        autocomplete="off"
+        [formGroup]="form"
+        (ngSubmit)="next()"
+        #personalDataForm="ngForm">
+
+    <div class="section-inputs">
+      <div class="text-m-bl title">
+        Monto del crédito a solicitar
+      </div>
+      <div class="two-inputs">
+        <mat-form-field appearance="fill" class="mat-form-general">
+          <input matInput
+                 formControlName="endDate"
+                 class="input-control"
+                 [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="mat-form-general">
+          <input matInput
+                 type="number"
+                 class="input-control"
+                 [class.is-invalid]="invalidField('valueLoan')"
+                 formControlName="valueLoan">
+        </mat-form-field>
+      </div>
+
+    </div>
+  </form>
+</div>

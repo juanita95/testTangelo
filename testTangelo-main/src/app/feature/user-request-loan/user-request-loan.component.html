@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <p class="main-title text-center">
+    A continuación podrá realizar las solicitudes de los clientes para el crédito correspondiente
+  </p>
+  <app-current-value-loan>
+  </app-current-value-loan>
+  <div class="inputs">
+    <form class="form-bl"
+          autocomplete="off"
+          (ngSubmit)="next()"
+          [formGroup]="form">
+      <div class="section-inputs">
+        <div class="text-m-bl title">
+          Nombre y apellidos
+        </div>
+        <mat-form-field appearance="fill" class="mat-form-general">
+          <input matInput
+                 type="text"
+                 class="input-control"
+                 [class.is-invalid]="invalidField('name')"
+                 formControlName="name">
+        </mat-form-field>
+      </div>
+
+      <div class="section-inputs">
+        <div class="text-m-bl title">
+          Cédula de ciudadania y correo electrónico
+        </div>
+        <div class="two-inputs">
+          <mat-form-field appearance="fill" class="mat-form-general">
+            <input matInput
+                   type="number"
+                   class="input-control"
+                   [class.is-invalid]="invalidField('document')"
+                   formControlName="document">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-general">
+            <input matInput
+                   type="email"
+                   class="input-control"
+                   [class.is-invalid]="invalidField('email')"
+                   formControlName="email">
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="section-inputs">
+        <app-loan-request [canGetValuesInput]="canGetValuesLoan">
+        </app-loan-request>
+      </div>
+
+      <div class="buttons section-inputs">
+        <app-button type="submit"
+                    [style]="'button-accept'"
+                    class="button-request">
+          Aceptar
+        </app-button>
+      </div>
+    </form>
+  </div>
+</div>

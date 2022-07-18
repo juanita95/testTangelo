@@ -1,0 +1,47 @@
+<div class="table-main">
+  <div class="table-wrapper">
+    <div class="contents-table" [ngClass]="isCollapsedSB===true ? '': 'contents-table-false'">
+      <p class="sub-title-gr text-m-bl">Gestión de usuarios</p>
+      <div class="table-container scrollbar-gy">
+        <!-- table users -->
+        <mat-card class="mat-card">
+          <div class="table">
+            <div class="table-content">
+              <table mat-table
+                     [dataSource]="dataSource"
+                     matSort>
+                <!-- columns -->
+                <ng-container *ngFor="let column of columns; let i = index" [matColumnDef]="column">
+                  <th mat-sort-header class="text-m-bl"
+                      *matHeaderCellDef> {{columnsName[i]}}
+                  </th>
+                  <td mat-cell *matCellDef="let element">
+                    <p (click)="this.getColumnSelected(element, element[column])">{{element[column]}}</p>
+                  </td>
+                </ng-container>
+
+                <!-- row with different styles -->
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="
+                let row;
+                let even = even;
+                columns: displayedColumns;"
+                    [ngClass]="{gray: even}">
+                </tr>
+              </table>
+            </div>
+            <!-- paginator table -->
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 20, 50, 100]"
+                           showFirstLastButtons
+                           class="mat-paginator-users"
+                           aria-label="Select page of periodic elements">
+            </mat-paginator>
+
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

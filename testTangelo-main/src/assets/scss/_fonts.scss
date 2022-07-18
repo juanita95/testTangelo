@@ -1,0 +1,29 @@
+@import "colors";
+
+.main-title {
+  font-size: 1.2rem;
+  color: $black;
+  font-weight: bolder;
+  @extend .text-base;
+}
+
+.text-m-wh {
+  font-size: .9rem;
+  @extend .text-base;
+  color: $white;
+}
+
+.text-m-bl {
+  font-size: .9rem;
+  color: $black;
+  margin: 0;
+  @extend .text-base;
+}
+
+.text-base {
+  font-family: brandingBold, inherit;
+}
+
+.text-center {
+  text-align: center;
+}

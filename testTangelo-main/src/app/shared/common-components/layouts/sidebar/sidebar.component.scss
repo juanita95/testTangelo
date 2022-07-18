@@ -1,0 +1,279 @@
+@import "src/assets/scss/index";
+
+.navbar ::ng-deep {
+
+  .desktop-toolbar .mat-toolbar-single-row {
+    justify-content: space-between;
+  }
+
+  .mat-drawer-inner-container {
+    overflow: hidden !important;
+  }
+
+  .navbar .mat-drawer-backdrop.mat-drawer-shown {
+    background: $gradient-blue;
+  }
+
+  .mobile-drawer .mat-drawer-inner-container {
+    display: grid;
+    grid-template-rows: 95px auto;
+  }
+
+}
+
+@mixin difuse-title {
+
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin position-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desktop-toolbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  box-shadow: 1px 4px 6px #07324F32;
+  z-index: 3;
+  background-color: $white-header;
+  transition: background-color 0.7s;
+}
+
+
+.menu-desktop {
+  border-radius: 30px;
+  height: 100%;
+  vertical-align: middle;
+  min-width: fit-content;
+}
+
+.sidebar-button {
+  font-family: inherit;
+  line-height: 0.15;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  width: auto;
+
+  .menu-icons {
+    margin-left: 7px;
+  }
+}
+
+.exp-panel {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 0 0 0 30px;
+  display: flex;
+
+  .link-active {
+    width: 96%;
+  }
+}
+
+.menu-icons {
+  width: 35px;
+  height: 35px;
+}
+
+.item-icons {
+  width: 25px;
+  height: 25px;
+}
+
+.drawer-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  padding: 25px 0;
+  margin-bottom: 5px;
+  border-radius: 15px;
+}
+
+mat-icon {
+  height: auto;
+  width: auto;
+}
+
+.material-icons {
+  font-size: 25px;
+  transition: color 0.7s;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+mat-drawer-container {
+  height: 100%;
+  width: 100%;
+  background: $transparent;
+}
+
+.mat-drawer-content {
+  overflow: hidden;
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 100%;
+}
+
+.mobile-drawer {
+  margin-top: 10px;
+  border-radius: 0 41px 70px 0;
+  background: $gradient-blue;
+  width: 70%;
+  transition: width 0.8s;
+}
+
+.container-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem 0 5% 0;
+  width: 99%;
+  overflow: auto;
+}
+
+.container-link::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 12px;
+  overflow: hidden;
+}
+
+.container-link::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 8px;
+  border-radius: 20px;
+}
+
+.container-link-item {
+  width: 100%;
+}
+
+.link-section {
+  cursor: pointer;
+  width: auto;
+  margin: 0 0 3px 24px;
+
+  .material-icons {
+    color: white;
+    margin-left: 10px;
+    font-size: 27px;
+    transition: none;
+  }
+
+  .item-icons {
+    margin-left: 10px;
+  }
+
+  .margin-menu {
+    margin-left: 25px;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .navbar ::ng-deep {
+    .mobile-drawer {
+      display: none;
+    }
+
+    .navbar .mat-drawer-backdrop {
+      display: none;
+    }
+
+    .content-drawer .mat-toolbar-single-row {
+      justify-content: space-evenly;
+      height: 75px;
+    }
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .mat-icon {
+    display: flex;
+  }
+
+  .list-mobile {
+    display: none;
+  }
+
+  .tab-title, .icons-mobile {
+    display: none;
+  }
+
+  .user-image-logo {
+    display: none;
+  }
+
+  .logo-client {
+    width: 11rem;
+    cursor: pointer;
+  }
+
+  .container {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .sidebar-button {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+    align-items: center;
+  }
+  .content-links-desktop {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .desktop-toolbar-client {
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 1px 4px 6px #07324F32;
+  }
+
+  .user-image {
+    display: none;
+  }
+
+  .icons-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 4rem;
+  }
+}
+
+.components-client {
+  height: calc(100% - 64px);
+  overflow: auto;
+  @extend .scrollbar-gr;
+}
+
+::ng-deep {
+  .desktop-toolbar.mat-toolbar-single-row {
+    height: 64px !important;
+  }
+}

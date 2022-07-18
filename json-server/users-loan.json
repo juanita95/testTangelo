@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "name": "atenea aranzazu",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": false,
+      "id": 1,
+      "valueLoan": 0,
+      "endDate": ""
+    },
+    {
+      "name": "monis aranzazu",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": false,
+      "id": 2,
+      "valueLoan": 0,
+      "endDate": "2022-07-27T05:00:00.000Z"
+    },
+    {
+      "name": "juanita aranzazu",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": false,
+      "id": 3,
+      "valueLoan": 0,
+      "endDate": "2022-07-27T05:00:00.000Z"
+    },
+    {
+      "name": "nohelia aguirre",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": false,
+      "id": 4,
+      "valueLoan": 0,
+      "endDate": "2022-07-27T05:00:00.000Z"
+    },
+    {
+      "name": "isis aranzazu",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": true,
+      "id": 5,
+      "valueLoan": 19000,
+      "endDate": "2022-07-27T05:00:00.000Z"
+    },
+    {
+      "name": "monis aranzazu",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": false,
+      "id": 6,
+      "valueLoan": 0,
+      "endDate": "2022-07-27T05:00:00.000Z"
+    },
+    {
+      "name": "atenea aranzazu",
+      "document": 545,
+      "email": "juanit1195@gamil.com",
+      "isLoanActive": false,
+      "id": 7,
+      "valueLoan": 0,
+      "endDate": "2022-07-27T05:00:00.000Z"
+    },
+    {
+      "name": "fhfgh",
+      "email": "fghfd@asdj.co",
+      "id": 8,
+      "isLoanActive": false,
+      "endDate": "2022-07-21T05:00:00.000Z",
+      "document": 45786,
+      "valueLoan": 15000
+    },
+    {
+      "name": "dfhdfg",
+      "email": "jhasd@asd.co",
+      "id": 9,
+      "isLoanActive": false,
+      "endDate": "",
+      "document": 78,
+      "valueLoan": 15000
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+@import "src/assets/scss/index";
+
+.title {
+  margin: 2% 0;
+}
+
+.section-inputs {
+  width: 100%;
+}
+
+.mat-form-general {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.button-cancel {
+  margin-right: 2%;
+}
+
+.cancel-button {
+  margin-right: 5%;
+}
+
+.two-inputs {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 48% 48%;
+  justify-content: space-between;
+}
+
+.header-end-date {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.current-time {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.button-request {
+  width: 13rem;
+}
+
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-usual) {
+  .wrapper {
+    width: 70%;
+    margin: 3% auto;
+  }
+}
+
+@media (min-width: $breakpoint-desktop-usual) {
+  .wrapper {
+    width: 50%;
+    margin: 3% auto;
+  }
+}
+
+@media (max-width: $breakpoint-desktop-usual) {
+  .wrapper {
+    margin: 5% auto;
+    width: 90%;
+  }
+}
+
+.card {
+  width: 100%;
+  display: flex;
+}

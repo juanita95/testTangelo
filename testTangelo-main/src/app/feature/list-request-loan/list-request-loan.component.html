@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <p class="main-title text-center">
+    A continuación podrá realizar el pago del usuario dando click en la opcion "pagar" que tiene cada usuario
+  </p>
+  <app-current-value-loan>
+  </app-current-value-loan>
+  <app-table
+    [columns]="columnsUser"
+    [columnsName]="columnsNames"
+    [arrayElements]="users"
+    (sendData)="updatePayment($event)"
+  ></app-table>
+</div>
